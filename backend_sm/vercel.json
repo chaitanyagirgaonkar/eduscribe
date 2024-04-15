@@ -1,3 +1,23 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "./src/index.js" }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.js"
+    }
+  ],
+  "env": {
+    // Define environment variables here if needed
+  },
+  "build": {
+    "env": {
+      // Define build-time environment variables here if needed
+    }
+  }
 }
