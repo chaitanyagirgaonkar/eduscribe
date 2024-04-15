@@ -25,7 +25,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/v1/users/login',
+            const response = await axios.post('https://eduscribe-beryl.vercel.app/api/v1/users/login',
                 JSON.stringify({ username, password }),
                 {
                     headers: { 'Content-Type': 'application/json' },
