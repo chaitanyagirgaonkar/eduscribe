@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/v1': "https://eduscribe.onrender.com/api"
+      '/v1': "https://eduscribe-beryl.vercel.app/api"
     }
   }
 })
