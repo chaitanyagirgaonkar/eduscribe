@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser"
 const app = express()
 
 app.use(cors({
-    origin: ["https://eduscribee.vercel.app/"],
+    origin: ["https://eduscribee.vercel.app"],
     credentials: true
 }))
 
