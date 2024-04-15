@@ -10,5 +10,10 @@ export default defineConfig({
     proxy: {
       '/v1': "https://eduscribe-beryl.vercel.app/api"
     }
+  },
+  preview: {
+    proxy: {
+      '/v1': "https://eduscribe-beryl.vercel.app/api"
+    }
   }
 })
