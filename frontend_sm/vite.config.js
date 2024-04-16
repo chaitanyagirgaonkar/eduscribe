@@ -11,7 +11,7 @@ export default defineConfig({
       '/v1': "https://eduscribe-beryl.vercel.app/api"
     }
   },
-  preview: {
+  build: {
     proxy: {
       '/v1': "https://eduscribe-beryl.vercel.app/api"
     }
