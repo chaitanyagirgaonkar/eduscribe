@@ -5,6 +5,7 @@ import { Link, useNavigate, Outlet } from "react-router-dom"
 import axios from 'axios'
 import { FaUserCircle } from "react-icons/fa";
 import useLogout from '../../hooks/useLogout.js';
+import useAxiosPrivate from '../../hooks/useAxiosPrivate.js';
 
 function SmNavbar() {
     const navigate = useNavigate()
@@ -12,9 +13,11 @@ function SmNavbar() {
     const handleClick = () => setNav(!nav)
     const [user, setUser] = useState()
     const logout = useLogout()
+    const axiosPrivate = useAxiosPrivate();
+
 
     useEffect(() => {
-        axios.get('/v1/users/current-user')
+        axiosPrivate.get('https://eduscribe-beryl.vercel.app/api/v1/users/current-user')
             .then((res) => {
                 // const username = res.data.data.username
                 setUser(res.data.data)

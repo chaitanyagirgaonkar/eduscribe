@@ -21,7 +21,7 @@ function EditPdf({ onHandleEditNote, pdfId, pdfDetails, onHandleEditPdf }) {
         formData.append("coverImage", thumbnail)
 
         try {
-            const res = await axios.patch(`/v1/pdfs/${pdfId}`, formData,
+            const res = await axios.patch(`https://eduscribe-beryl.vercel.app/api/v1/pdfs/${pdfId}`, formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" }
                 })

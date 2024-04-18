@@ -21,7 +21,7 @@ function AllPdf() {
     )
 
     useEffect(() => {
-        axiosPrivate.get("/v1/pdfs/")
+        axiosPrivate.get("https://eduscribe-beryl.vercel.app/api/v1/pdfs/")
             .then((res) => {
                 if (Array.isArray(res.data.data)) {
                     setPdf(res.data.data);

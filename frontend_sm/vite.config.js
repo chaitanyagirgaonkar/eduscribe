@@ -6,14 +6,5 @@ import react from '@vitejs/plugin-react'
 // https://eduscribe.onrender.com/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    proxy: {
-      '/v1': "https://eduscribe-beryl.vercel.app/api"
-    }
-  },
-  build: {
-    proxy: {
-      '/v1': "https://eduscribe-beryl.vercel.app/api"
-    }
-  }
+
 })

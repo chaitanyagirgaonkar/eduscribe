@@ -15,7 +15,7 @@ function User() {
     const logout = useLogout()
 
     useEffect(() => {
-        axiosPrivate.get('/v1/users/current-user')
+        axiosPrivate.get('https://eduscribe-beryl.vercel.app/api/v1/users/current-user')
             .then((res) => {
 
                 setUser(res.data.data)
