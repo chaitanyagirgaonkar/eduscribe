@@ -9,16 +9,20 @@ import { FaUserCircle } from "react-icons/fa";
 import useAuth from '../../hooks/useAuth.js'
 import { useState, useEffect } from 'react';
 import axios from "axios"
+import useAxiosPrivate from '../../hooks/useAxiosPrivate.js';
+import { axiosPrivate } from '../../api/axios.js';
 
 function Home() {
     const { auth } = useAuth()
     const navigate = useNavigate()
     const [user, setUser] = useState()
+    const axiosPrivate = useAxiosPrivate();
 
     useEffect(() => {
-        axios.get('/v1/users/current-user')
+        axios.get('https://eduscribe-beryl.vercel.app/api/v1/users/current-user',{withCredentials: true})
             .then((res) => {
 
+                // console.log(res.data.data)
                 setUser(res.data.data)
 
             })

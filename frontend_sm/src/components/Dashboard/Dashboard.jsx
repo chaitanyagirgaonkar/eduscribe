@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { FaUserCircle } from "react-icons/fa";
 import { useNavigate, useLocation, Outlet, Link } from "react-router-dom"
 import axios from "axios"
-import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 import { FaEdit } from "react-icons/fa";
 import toast, { Toaster } from 'react-hot-toast';
 import useAuth from '../../hooks/useAuth';
-
+import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 function Dashboard() {
     const [user, setUser] = useState()
     const navigate = useNavigate()
@@ -16,9 +15,10 @@ function Dashboard() {
     const { changeUserDetails } = useAuth()
     const [userPdf, setUserPdf] = useState()
     const [userProject, setUserProject] = useState()
+   
 
     useEffect(() => {
-        axios.get('/v1/users/current-user')
+        axiosPrivate.get('https://eduscribe-beryl.vercel.app/api/v1/users/current-user')
             .then((res) => {
 
                 setUser(res.data.data)
@@ -34,7 +34,7 @@ function Dashboard() {
 
 
     useEffect(() => {
-        axios.get("/v1/dashboard/stats")
+        axiosPrivate.get("https://eduscribe-beryl.vercel.app/api/v1/dashboard/stats")
             .then((res) => {
                 setUserPdf(res.data.data.userPdf[0].totalPdf)
                 setUserProject(res.data.data.userProject[0].totalProject)

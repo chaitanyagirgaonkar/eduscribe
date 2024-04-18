@@ -22,7 +22,7 @@ function AddProject({ onHandleAddProject, onProjectAdded }) {
         formData.append("language", language)
         formData.append("coverImage", thumbnail)
         try {
-            const res = await axios.post("/v1/project/create", formData,
+            const res = await axios.post("https://eduscribe-beryl.vercel.app/api/v1/project/create", formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" }
                 })

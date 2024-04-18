@@ -20,7 +20,7 @@ function UserProject() {
 
     useEffect(() => {
         axiosPrivate
-            .get('/v1/project/projects')
+            .get('https://eduscribe-beryl.vercel.app/api/v1/project/projects')
             .then((res) => {
                 if (Array.isArray(res.data.data)) {
                     setProject(res.data.data);

@@ -9,7 +9,7 @@ function ProjectOne() {
     const [project, setProject] = useState([])
 
     useEffect(() => {
-        axios.get(`/v1/project/${projectId}`)
+        axios.get(`https://eduscribe-beryl.vercel.app/api/v1/project/${projectId}`)
             .then((res) => {
                 console.log(res.data.data)
                 setProject(res.data.data)

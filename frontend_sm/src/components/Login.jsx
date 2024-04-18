@@ -32,10 +32,11 @@ function Login() {
                     withCredentials: true
                 }
             )
-            // console.log(response.data)
+            console.log(response.data)
             const accessToken = response?.data?.accessToken;
             setAuth({ username, accessToken })
-            toast.success("User Login Successfully !")
+            console.log(response.data)
+            // toast.success("User Login Successfully !")
             setUsername("")
             setPassword("")
             setTimeout(() => {
