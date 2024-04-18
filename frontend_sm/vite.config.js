@@ -6,10 +6,5 @@ import react from '@vitejs/plugin-react'
 // https://eduscribe.onrender.com/
 export default defineConfig({
   plugins: [react()],
-  // server: {
-  //   proxy: {
-  //     '/v1': "http://localhost:8000/api"
-  //   }
-  // },
-  
+
 })
