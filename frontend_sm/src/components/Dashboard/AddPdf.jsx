@@ -24,7 +24,9 @@ function AddPdf({ onHandleAddNote, onPdfAdded }) {
         try {
             const res = await axios.post("https://eduscribe-beryl.vercel.app/api/v1/pdfs/create", formData,
                 {
-                    headers: { "Content-Type": "multipart/form-data" }
+                    headers: { "Content-Type": "multipart/form-data" },
+                    
+    withCredentials: true
                 })
             // console.log(res)
             toast.success("Project Added Successfully !")
