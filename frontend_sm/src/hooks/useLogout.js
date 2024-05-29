@@ -8,7 +8,7 @@ const useLogout = () => {
     const logout = async () => {
         setAuth({})
         try {
-            const response = await axios.post('https://eduscribe-beryl.vercel.app/api/v1/users/logout', {
+            const response = await axios.post('https://eduscribe.onrender.com/api/v1/users/logout', {
                 withCredentials: true
             })
             console.log(response)

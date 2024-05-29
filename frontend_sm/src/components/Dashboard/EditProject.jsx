@@ -24,7 +24,7 @@ function EditProject({ onHandleEditProject, projectId, projectDetails, onEditPro
         formData.append("coverImage", thumbnail)
 
         try {
-            const res = await axios.patch(`https://eduscribe-beryl.vercel.app/api/v1/project/${projectId}`, formData,
+            const res = await axios.patch(`https://eduscribe.onrender.com/api/v1/project/${projectId}`, formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" }
                 })

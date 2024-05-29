@@ -13,7 +13,7 @@ function AllProject() {
     )
 
     useEffect(() => {
-        axiosPrivate.get("https://eduscribe-beryl.vercel.app/api/v1/project/")
+        axiosPrivate.get("https://eduscribe.onrender.com/api/v1/project/")
             .then((res) => {
                 // console.log(res.data.data)
                 setProject(res.data.data)

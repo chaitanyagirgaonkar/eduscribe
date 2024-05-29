@@ -11,7 +11,7 @@ function PdfOne() {
     const { sidebar } = useAuth()
 
     useEffect(() => {
-        axios.get(`https://eduscribe-beryl.vercel.app/api/v1/pdfs/${pdfId}`)
+        axios.get(`https://eduscribe.onrender.com/api/v1/pdfs/${pdfId}`)
             .then((res) => {
                 // console.log(res.data.data)
                 setPdf(res.data.data)

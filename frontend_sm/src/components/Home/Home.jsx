@@ -19,7 +19,7 @@ function Home() {
     const axiosPrivate = useAxiosPrivate();
 
     useEffect(() => {
-        axios.get('https://eduscribe-beryl.vercel.app/api/v1/users/current-user',{withCredentials: true})
+        axios.get('https://eduscribe.onrender.com/api/v1/users/current-user',{withCredentials: true})
             .then((res) => {
 
                 // console.log(res.data.data)

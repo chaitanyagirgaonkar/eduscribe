@@ -18,7 +18,7 @@ function Dashboard() {
    
 
     useEffect(() => {
-        axiosPrivate.get('https://eduscribe-beryl.vercel.app/api/v1/users/current-user')
+        axiosPrivate.get('https://eduscribe.onrender.com/api/v1/users/current-user')
             .then((res) => {
 
                 setUser(res.data.data)
@@ -34,7 +34,7 @@ function Dashboard() {
 
 
     useEffect(() => {
-        axiosPrivate.get("https://eduscribe-beryl.vercel.app/api/v1/dashboard/stats")
+        axiosPrivate.get("https://eduscribe.onrender.com/api/v1/dashboard/stats")
             .then((res) => {
                 setUserPdf(res.data.data.userPdf[0].totalPdf)
                 setUserProject(res.data.data.userProject[0].totalProject)

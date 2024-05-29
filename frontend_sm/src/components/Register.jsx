@@ -30,7 +30,7 @@ function Register() {
     }, [])
     const handleSendOtp = async () => {
         try {
-            const response = await axios.post('https://eduscribe-beryl.vercel.app/api/v1/users/sendotp',
+            const response = await axios.post('https://eduscribe.onrender.com/api/v1/users/sendotp',
                 JSON.stringify({ email }),
                 {
                     headers: {
@@ -70,7 +70,7 @@ function Register() {
             return;
         }
         try {
-            const response = await axios.post('https://eduscribe-beryl.vercel.app/api/v1/users/register',
+            const response = await axios.post('https://eduscribe.onrender.com/api/v1/users/register',
                 JSON.stringify({ username: user, email, password: pwd, collegeName: clgName, otp: combineOtp }),
                 {
                     headers: {

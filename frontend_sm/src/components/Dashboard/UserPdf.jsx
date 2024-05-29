@@ -25,7 +25,7 @@ function UserPdf() {
     )
     useEffect(() => {
         axiosPrivate
-            .get('https://eduscribe-beryl.vercel.app/api/v1/pdfs/pdfs')
+            .get('https://eduscribe.onrender.com/api/v1/pdfs/pdfs')
             .then((res) => {
                 if (Array.isArray(res.data.data)) {
                     setPdf(res.data.data);

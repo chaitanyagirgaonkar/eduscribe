@@ -8,7 +8,7 @@ function useRefreshToken() {
     const { setAuth } = useAuth()
 
     const refresh = async () => {
-        const response = await axios.post("https://eduscribe-beryl.vercel.app/api/v1/users/refresh-token", {
+        const response = await axios.post("https://eduscribe.onrender.com/api/v1/users/refresh-token", {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
         })

@@ -17,7 +17,7 @@ function SmNavbar() {
 
 
     useEffect(() => {
-        axiosPrivate.get('https://eduscribe-beryl.vercel.app/api/v1/users/current-user')
+        axiosPrivate.get('https://eduscribe.onrender.com/api/v1/users/current-user')
             .then((res) => {
                 // const username = res.data.data.username
                 setUser(res.data.data)
