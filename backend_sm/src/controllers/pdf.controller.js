@@ -50,6 +50,9 @@ const createPdf = asyncHandler(async (req, res) => {
 
 
     const pdfFileLocalPath = req?.files?.pdfFile?.[0]?.path
+
+    console.log(pdfFileLocalPath);
+
     const coverImageLocalPath = req?.files?.coverImage?.[0]?.path
 
 
@@ -65,7 +68,7 @@ const createPdf = asyncHandler(async (req, res) => {
     const coverImage = await uploadCoverImageOnCloudinary(coverImageLocalPath)
 
 
-
+    console.log(pdfFile)
     if (!pdfFile) {
         throw new ApiError(406, "failed to upload pdf on cloudinary")
     }

@@ -2,18 +2,18 @@ import { v2 as cloudinary } from 'cloudinary'
 import fs from 'fs'
 
 cloudinary.config()
-
+// cloudinary.config.secure = true;
 
 const uploadOnCloudinary = async (localFilePath) => {
     try {
-        if (!localFilePath) return null
+        if (!localFilePath) return console.log("hello")
 
         const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type: "raw"
         })
         // file upload successfully
-
-        // console.log("successfully upload on cloudinary", response.url);
+        console.log(response)
+        console.log("successfully upload on cloudinary", response.url);
         fs.unlinkSync(localFilePath)
         return response
 
