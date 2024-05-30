@@ -21,7 +21,7 @@ function AllPdf() {
     )
 
     useEffect(() => {
-        axiosPrivate.get("https://eduscribe.onrender.com/api/v1/pdfs/")
+        axiosPrivate.get("https://eduscribe.onrender.com/api/v1/pdfs/",{withCredentials: true})
             .then((res) => {
                 if (Array.isArray(res.data.data)) {
                     setPdf(res.data.data);
