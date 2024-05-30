@@ -9,7 +9,7 @@ function ProjectOne() {
     const [project, setProject] = useState([])
 
     useEffect(() => {
-        axios.get(`https://eduscribe.onrender.com/api/v1/project/${projectId}`)
+        axios.get(`https://eduscribe.onrender.com/api/v1/project/${projectId}`,{withCredentials: true})
             .then((res) => {
                 console.log(res.data.data)
                 setProject(res.data.data)

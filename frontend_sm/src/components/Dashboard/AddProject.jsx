@@ -24,7 +24,9 @@ function AddProject({ onHandleAddProject, onProjectAdded }) {
         try {
             const res = await axios.post("https://eduscribe.onrender.com/api/v1/project/create", formData,
                 {
-                    headers: { "Content-Type": "multipart/form-data" }
+                    headers: { "Content-Type": "multipart/form-data" },
+
+                    withCredentials: true
                 })
             // console.log(res)
             toast.success("Project Added Successfully !")

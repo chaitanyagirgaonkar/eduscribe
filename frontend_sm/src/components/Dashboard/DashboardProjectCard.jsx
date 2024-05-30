@@ -17,7 +17,7 @@ function DashboardProjectCard({ p, onDeleteProject, EditedProject }) {
         const confirmDelete = window.confirm('Are you sure you want to delete this Project ?');
         if (confirmDelete) {
             try {
-                const response = await axios.delete(`https://eduscribe.onrender.com/api/v1/project/${projectId}`);
+                const response = await axios.delete(`https://eduscribe.onrender.com/api/v1/project/${projectId}`,{withCredentials: true});
                 toast.success('Project deleted Successfully !');
                 onDeleteProject(projectId);
 

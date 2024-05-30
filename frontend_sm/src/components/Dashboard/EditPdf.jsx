@@ -23,7 +23,8 @@ function EditPdf({ onHandleEditNote, pdfId, pdfDetails, onHandleEditPdf }) {
         try {
             const res = await axios.patch(`https://eduscribe.onrender.com/api/v1/pdfs/${pdfId}`, formData,
                 {
-                    headers: { "Content-Type": "multipart/form-data" }
+                    headers: { "Content-Type": "multipart/form-data" },
+                    withCredentials: true
                 })
             // console.log(res.data.data)
             setPdf(res.data.data)

@@ -17,7 +17,7 @@ function DashboardPdfCard({ p, onDeletePdf, onEditPdf }) {
         const confirmDelete = window.confirm('Are you sure you want to delete this Note?');
         if (confirmDelete) {
             try {
-                const response = await axios.delete(`https://eduscribe.onrender.com/api/v1/pdfs/${pdfId}`);
+                const response = await axios.delete(`https://eduscribe.onrender.com/api/v1/pdfs/${pdfId}`,{withCredentials: true});
                 toast.success('Note deleted Successfully !');
                 onDeletePdf(pdfId);
 

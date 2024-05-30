@@ -13,7 +13,9 @@ function ViewPdf({ pdfId, onHandleViewNote }) {
     }
 
     useEffect(() => {
-        axios.get(`https://eduscribe.onrender.com/api/v1/pdfs/${pdfId}`)
+        axios.get(`https://eduscribe.onrender.com/api/v1/pdfs/${pdfId}`, {
+            withCredentials: true
+        })
             .then((res) => {
                 // console.log(res.data.data)
                 setPdf(res.data.data)
